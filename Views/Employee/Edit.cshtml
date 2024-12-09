@@ -1,0 +1,41 @@
+﻿@model Final_project.Models.Employee
+
+@{
+    ViewBag.Title = "Edit Employee";
+}
+
+<h2>Edit Employee</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    @Html.HiddenFor(m => m.EmployeeID) <!-- Hidden field for EmployeeID -->
+
+    <div class="form-group">
+        @Html.LabelFor(m => m.Name)
+        @Html.TextBoxFor(m => m.Name, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.Name)
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(m => m.Position)
+        @Html.TextBoxFor(m => m.Position, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.Position)
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(m => m.Age)
+        @Html.TextBoxFor(m => m.Age, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.Age)
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(m => m.Salary)
+        @Html.TextBoxFor(m => m.Salary, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.Salary)
+    </div>
+
+    <button type="submit" class="btn btn-primary">Save</button>
+    @Html.ActionLink("Cancel", "Index", null, new { @class = "btn btn-secondary" })
+}
