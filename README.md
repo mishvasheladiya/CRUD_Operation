@@ -16,7 +16,7 @@ Data Access: ADO.NET
 Styling: CSS
 Database: SQL Server 2014 Management
 
-Database:
+Database (use 'SQL server 2014 Management' Database system):
 
 ![image](https://github.com/user-attachments/assets/3ddfd016-526e-47b4-8af7-4b89780ebf24)
 
